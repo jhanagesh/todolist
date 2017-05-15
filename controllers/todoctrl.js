@@ -61,6 +61,7 @@ var app = angular.module('todoApp.controller',['ngCookies'])
 				$scope.editablerow=true;
 				$scope.editIndex = index;
 				$scope.addTaskBtnLabel = "Update";
+
 			};
 			$scope.$watch('taskList',function(){
 				$scope.pendingCount = $filter('filter')($scope.taskList,{done:false}).length;
@@ -77,6 +78,7 @@ var app = angular.module('todoApp.controller',['ngCookies'])
 					return $scope.reverseSort ? 'arrow-down' : 'arrow-up';
 				}
 				return '';
+				
 			}
 			$scope.onFbLogout=function(){
 				loginlogoutService.fbLogout($scope,$cookies);
