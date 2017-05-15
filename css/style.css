@@ -1,0 +1,103 @@
+body{
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header{
+  background: #35424a;
+  color:#ffffff;
+  /*padding-top: 30px;*/
+  min-height: 70px;
+  border-bottom: #e8491d 3px solid;
+}
+
+.container{
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+}
+#showcase{
+  min-height: 500px;
+  background: url(../img/showcase.jpg) no-repeat 0 -500px;
+  text-align: center;
+  color: #ffffff;
+}
+
+header #branding h1{
+  float: left;
+  margin: 0;
+}
+.heighlight{
+  color:#e8491d;
+}
+
+.login form{
+  margin-top: 100px;
+  float: right;
+}
+
+.errorMsg{
+ color:red;
+ 
+}
+
+.login input[type="text"],input[type="password"],input[type="email"]{
+  padding: 20px;
+  width: 250px;
+  border: 2px solid silver;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+
+@media (max-width:760px) {
+.login{
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+
+
+}
+
+
+.button_1{
+  height: 38px;
+  background: #e8491d;
+  border: 0;
+  width: 200px;
+  color: #ffffff;
+  margin-top: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.button_2{
+  height: 38px;
+  background: #e8491d;
+  border: 0;
+  width: 220px;
+  color: #ffffff;
+  margin-top: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+a{
+  text-decoration: none;
+}
+footer{
+  padding: 2px;
+  text-align: center;
+  background-color: #e8491d;
+  color: #ffffff;
+  font-size: 15px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Javasccript page -->
+	
+  <script src="../ngminjs/angular.min.js"></script>
+  <script src="../ngminjs/angular-route.min.js"></script>
+  <script src="../ngminjs/angular-cookie.js"></script>
+	
+
+
+	<script src="./controllers/loginctrl.js"></script>
+
+  <script src="./js/app.js"></script>
+  
+  <!-- Serices -->
+  <script src="services/loginoutservice.js"></script>
+ 	
+	<!-- css page -->
+  
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body ng-app="loginApp" ng-controller="loginCtrl">
+
+
+    <header>
+      <div class="container">
+        <div id="branding">
+            <h1><span class="heighlight">forth</span>c<>de</h1>
+        </div>
+      </div>
+    </header>
+
+    <section id="showcase">
+      <div class="container">
+          <div class="login">
+          <div>
+              <form   class="form-input" name="loginform">
+               
+                  
+              <a ng-click="onFbLogin()"> <img ng-src="{{imgsrc.flag}}" ng-click="fbLogin" style="cursor:pointer" ></a>
+                  <h1>
+                    {{facebook.username}}
+                  </h1>
+
+                  <h1>
+                    {{facebook.email}}
+                  </h1>
+                  <h1>
+                    <img ng-src="{{facebook.fbpic}}">
+                  </h1>
+
+                  <!-- <a ng-click="onFbLogout()"> <img ng-src="{{imgsrclogout.flag}}" ng-click="fbLogin" style="cursor:pointer;width: 250px;height: 100px;" ></a> -->
+              </form>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>forthcode web development, Copyright; &copy;2017</p>
+    </footer>
+</body>
+</html>
