@@ -19,7 +19,7 @@
 	/*margin-top: -23px;*/
 	font-size: 13px;
 	/*margin-right: 12px;*/
-	/*visibility: hidden;*/
+	visibility: hidden;
 }
 #inputSmall{
 	width: 40%;
@@ -35,8 +35,8 @@
 #taskList .list-group-item:hover button{
 
 	visibility: visible;
-
 }
+	
 
 #taskList .list-group-item:hover{
 	cursor: pointer;

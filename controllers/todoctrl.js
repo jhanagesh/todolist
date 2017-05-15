@@ -69,7 +69,6 @@ var app = angular.module('todoApp.controller',['ngCookies'])
 				$scope.taskList = $filter('filter')($scope.taskList,{done:false});
 			}
 			$scope.sortData = function(column){
-
 				$scope.reverseSort = ($scope.sortColumn==column) ? !$scope.reverseSort :false;
 				$scope.sortColumn=column;
 			};

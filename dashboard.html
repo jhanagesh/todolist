@@ -58,8 +58,8 @@
 						</tr>
 					</thead>
 
-					<tbody>
-						<tr ng-repeat="task in taskList | filter:searchfield | orderBy:sortColumn:reverseSort">
+					<tbody >
+						<tr class="list-group-item" ng-repeat="task in taskList | filter:searchfield | orderBy:sortColumn:reverseSort">
 							<label class="description" ng-class="{strike: task.done}">
 								<td><input type="checkbox" name="" ng-model="task.done"> {{task.name}}</td>
 								<!-- <td>{{task.name}} </td> -->
