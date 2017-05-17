@@ -4,14 +4,28 @@
 	<title>To-do List | DashBoard</title>
 	<link rel="stylesheet" type="text/css" href="css/todostyle.css">
 	<link rel="stylesheet" type="text/css" href="css/bootswatch.css">
-	
-	<!-- Script Files -->
+
 	<script src="../ngminjs/angular.min.js"></script>
-	  <script src="../ngminjs/angular-cookie.js"></script>
+	<script src="../ngminjs/angular-cookie.js"></script>
+	<!-- Firebase lib Files -->
+	 <script src="http://localhost/firebaselib/firebase.js"></script>
+	 <script src="http://localhost/firebaselib/angularfire.min.js"></script>
+	 <script>
+		  // Initialize Firebase
+		  var config = {
+    apiKey: "AIzaSyCe9nWIZtV38aY6KVO5RYdSIaDAZnZNQi4",
+    authDomain: "todolistdb-29051.firebaseapp.com",
+    databaseURL: "https://todolistdb-29051.firebaseio.com",
+    projectId: "todolistdb-29051",
+    storageBucket: "todolistdb-29051.appspot.com",
+    messagingSenderId: "547434135653"
+  };
+  firebase.initializeApp(config);
+		</script>
 	<script src="js/todoapp.js"></script>
 	<script src="./controllers/todoctrl.js"></script>
 	
-	<!-- Serices Files -->
+
   	<script src="./js/app.js"></script>
   	<script src="./services/loginoutservice.js"></script>
 	
@@ -64,7 +78,8 @@
 								<td><input type="checkbox" name="" ng-model="task.done"> {{task.name}}</td>
 								<!-- <td>{{task.name}} </td> -->
 								<td>{{task.description}}</td>
-								<td>{{task.date | date:'dd-MM-yyyy | h:m'}}</td>
+
+								<td>{{task.date}}</td>
 								<td><button ng-click="editCurrTodo(task)" class="btn btn-primary btn-xs">Edit</button></td>
 								<td><button ng-click="deleteCurrTodo(task)" class="btn btn-primary btn-xs" style="background-color: red;border-color:#222222">Delete</button></td>
 							</label>
