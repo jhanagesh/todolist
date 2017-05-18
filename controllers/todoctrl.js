@@ -73,6 +73,8 @@ var app = angular.module('todoApp.controller',['firebase','ngCookies'])
 			};
 			// To delete the current clicked task
 			$scope.deleteCurrTodo = function(task){
+				console.log("Delteting selected Obj");
+				console.log(task);
 				$scope.taskList.$remove(task);
 				/*var index = getIndex(task);
 				$scope.taskList.splice(index,1);*/
@@ -99,9 +101,13 @@ var app = angular.module('todoApp.controller',['firebase','ngCookies'])
 				$scope.pendingCount = $filter('filter')($scope.taskList,{done:false}).length;
 			},true);
 			$scope.clearComplete = function(){
-				console.log($filter('filter')($scope.taskList,{done:false}));
+				console.log($filter('filter')($scope.taskList,{done:true}));
+				angular.forEach($scope.taskList, function(taksdone){
+					if(taksdone.done==true)
+						$scope.taskList.$remove(taksdone);	
+				});
 				//$scope.taskList.$remove($filter('filter')($scope.taskList,{done:false}));
-				$scope.taskList = $filter('filter')($scope.taskList,{done:false});
+				//$scope.taskList = $filter('filter')($scope.taskList,{done:false});
 			}
 			$scope.sortData = function(column){
 				$scope.reverseSort = ($scope.sortColumn==column) ? !$scope.reverseSort :false;
